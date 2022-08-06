@@ -1,0 +1,12 @@
+介绍darknet组成以及正向传播(核心代码都在models.py中)
+通过已经预训练好的模型进行网络搭建
+
+
+detail_model_1(train.py):
+        创建网络模型对象(model.py中的darknet类)
+            __init__:(special_model_1)
+                通过读取yolo.cfg文件, 指定好都用到了哪些结构以及参数
+                yolo.cfg中是按一层一层的顺序来写的
+                创建网络模型[调用create_modules函数(models.py)]
+            forward:(special_model_2)
+                设置正向传播顺序

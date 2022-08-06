@@ -1,0 +1,25 @@
+detail_picture_1(train.py)
+                读取：
+                    存放照片路径文件的路径
+                    分类的类别名称
+
+detail_picture_2(train.py)
+                创建datasets.py中的ListDataset对象（100*4）
+                对照片数据进行处理
+                    __init__:（specific_picture_1）
+                            读取照片文件路径
+                            将读取的照片链接更改为标签链接
+                    __getitem__：（specific_picture_2）
+                            读取照片内容
+                            对照片通过pad_to_square方法进行填充（specific_picture_3）
+                            
+                            读取图片对应的标签内容 
+                            因为我们对数据进行了填充处理导致图片改变，所以label也需要进行处理               
+
+                            对图像进行增强    
+                            将图像进行翻转（通过augmentations.horisontal_flip）
+                    collate_fn：（specific_picture_4）
+                            将__getitem__输出的图片进行缩放
+detail_picture_3(train.py)
+                创建torch.utils.data.DataLoader
+                进行100*5次的循环随机读入（epochs*batch_size）

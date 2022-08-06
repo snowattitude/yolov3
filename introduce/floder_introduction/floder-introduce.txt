@@ -1,0 +1,14 @@
+data中存放的是数据：
+                 1.存放各个图片的路径（5k.txt ；trainvalno5k.txt ）
+                 2.存放照片的文件夹（images）
+                 3.存放label的文件夹（labels）（相对坐标以及物体类别）
+picture_path.py: 
+                 生成每一个图片的存放路径的txt文件
+k-means.py:      
+                 分类算法
+config项目配置所有内容
+                    yolov3:是所有网络的配置
+                    coco.data:是所有图片信息的配置
+train.py就是训练文件
+test.py就是测试文件
+weights中存放的就是训练好的预训练模型

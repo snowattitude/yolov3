@@ -1,0 +1,3 @@
+1.datasets.py中
+            变量：
+                img_path和label_path的绝对路径
